@@ -20,13 +20,6 @@ int main(int argc, char const* argv[])
         exit(1);
     }
 
-    if(setsockopt(sock, SOL_SOCKET, SO_REUSEADDR,
-                (char *)&reuse, sizeof(reuse)) < 0) {
-        perror("setsockopt REUSE");
-        close(sock);
-        exit(1);
-    }
-
     memset((char *)&addr, 0, sizeof(addr));
     addr.sin_family = AF_INET;
     addr.sin_port = htons(12345);
