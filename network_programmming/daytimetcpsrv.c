@@ -11,7 +11,7 @@ int main(int argc, char const* argv[])
     bzero(&servaddr, sizeof(servaddr));
     servaddr.sin_family = AF_INET;
     servaddr.sin_addr.s_addr = htonl(INADDR_ANY);
-    servaddr.sin_port = htons(13);
+    servaddr.sin_port = htons(12345);
 
     Bind(listenfd, (struct sockaddr *)&servaddr, sizeof(servaddr));
     Listen(listenfd, LISTENQ);

@@ -18,7 +18,7 @@ int main(int argc, char const* argv[])
 
     bzero(&servaddr, sizeof(servaddr));
     servaddr.sin_family = AF_INET;
-    servaddr.sin_port = htons(13);
+    servaddr.sin_port = htons(12345);
     if(inet_pton(AF_INET, argv[1], &servaddr.sin_addr) <= 0) {
         fprintf(stderr, "inet_pton error for %s\n", argv[1]);
         exit(1);
