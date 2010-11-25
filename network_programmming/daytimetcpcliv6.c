@@ -1,10 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <strings.h>
-#include <netinet/in.h>
-#include <arpa/inet.h>
-
-#define MAXLINE 4096
+#include "lib.h"
 
 int main(int argc, char const* argv[])
 {
