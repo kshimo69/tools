@@ -25,6 +25,7 @@ int main(int argc, char const* argv[])
     }
     if(connect(sockfd, (struct sockaddr *)&servaddr, sizeof(servaddr)) < 0) {
         perror("connect");
+        close(sockfd);
         exit(1);
     }
     while((n = read(sockfd, recvline, MAXLINE)) > 0) {
