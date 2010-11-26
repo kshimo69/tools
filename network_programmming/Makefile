@@ -5,7 +5,7 @@ TARGETS = daytimetcpcli daytimetcpcliv6 daytimetcpsrv
 
 all: $(TARGETS)
 
-lib.o: lib.h
+lib.o: lib.h lib.c
 	$(CC) -c lib.c
 
 daytimetcpcli: daytimetcpcli.c lib.o
