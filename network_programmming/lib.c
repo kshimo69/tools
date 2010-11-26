@@ -264,3 +264,31 @@ void sock_set_wild(const struct sockaddr *sa, socklen_t salen)
     sock_set_addr(sa, salen, wildptr);
     return;
 }
+
+const char * Inet_ntop(int family, const void *addrptr, char *strptr, size_t len)
+{
+    const char *ptr;
+    if(strptr == NULL) {
+        fprintf(stderr, "NULL 3rd argument to inet_ntop\n");
+        exit(1);
+    }
+    if((ptr = inet_ntop(family, addrptr, strptr, len)) == NULL) {
+        perror("inet_ntop");
+        exit(1);
+    }
+    return(ptr);
+}
+
+void Inet_pton(int family, const char *strptr, void *addrptr)
+{
+    int n;
+    if((n = inet_pton(family, strptr, addrptr)) < 0) {
+        perror("inet_pton");
+        fprintf(stderr, "inet_pton failed for %s\n", strptr);
+        exit(1);
+    }
+    else if(n == 0) {
+        fprintf(stderr, "inet_pton failed for %s\n", strptr);
+        exit(1);
+    }
+}

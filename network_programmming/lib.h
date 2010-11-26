@@ -28,3 +28,5 @@ void sock_set_addr(const struct sockaddr *sockaddr,
 void sock_set_port(const struct sockaddr *sockaddr,
         socklen_t addrlen, int port);
 void sock_set_wild(const struct sockaddr *sockaddr, socklen_t addrlen);
+const char * Inet_ntop(int family, const void *addrptr, char *strptr, size_t len);
+void Inet_pton(int family, const char *strptr, void *addrptr);

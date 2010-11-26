@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -g -Wall
 
-TARGETS = daytimetcpcli daytimetcpcliv6 daytimetcpsrv
+TARGETS = daytimetcpcli daytimetcpcliv6 daytimetcpsrv daytimetcpsrv_print_client
 
 all: $(TARGETS)
 
@@ -15,6 +15,9 @@ daytimetcpcliv6: daytimetcpcliv6.c lib.o
 	$(CC) -o $@ $^
 
 daytimetcpsrv: daytimetcpsrv.c lib.o
+	$(CC) -o $@ $^
+
+daytimetcpsrv_print_client: daytimetcpsrv_print_client.c lib.o
 	$(CC) -o $@ $^
 
 clean:
