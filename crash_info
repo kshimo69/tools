@@ -1,0 +1,21 @@
+sys            > crash_sys.txt
+log            > crash_log.txt
+ps             > crash_ps.txt
+ps -a          > crash_ps-a.txt
+ps -l          > crash_ps-l.txt
+ps -t          > crash_ps-t.txt
+bt             > crash_bt.txt
+bt -a          > crash_bt-a.txt
+bt -f          > crash_bt-f.txt
+bt -af         > crash_bt-af.txt
+mod            > crash_mod.txt
+files          > crash_files.txt
+runq           > crash_runq.txt
+timer          > crash_timer.txt
+kmem -s        > crash_kmem-s.txt
+kmem -f        > crash_kmem-f.txt
+kmem -i        > crash_kmem-i.txt
+foreach bt     > crash_foreach_bt.txt
+foreach net -s > crash_foreach_net-s.txt
+foreach net -S > crash_foreach_net-S.txt
+foreach set    > crash_foreach_set.txt
